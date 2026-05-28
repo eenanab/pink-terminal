@@ -1,0 +1,23 @@
+{
+    "name": "Amira Pink",
+    "background": "#1a0f1e",
+    "foreground": "#f8c8e8",
+    "cursorColor": "#ff79c6",
+    "selectionBackground": "#6e2b5e",
+    "black": "#1a0f1e",
+    "red": "#ff9eb5",
+    "green": "#7ed8d0",
+    "yellow": "#ffb7a0",
+    "blue": "#b39ddb",
+    "purple": "#f48fb1",
+    "cyan": "#8ecae6",
+    "white": "#f8c8e8",
+    "brightBlack": "#4a2040",
+    "brightRed": "#ffb3c6",
+    "brightGreen": "#a8e6df",
+    "brightYellow": "#ffd4c8",
+    "brightBlue": "#d1c4e9",
+    "brightPurple": "#ff92df",
+    "brightCyan": "#b2ebf2",
+    "brightWhite": "#ffffff"
+}
