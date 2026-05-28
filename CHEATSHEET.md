@@ -1,210 +1,185 @@
-# ♡ Amira's Terminal Cheatsheet
+# 🌸 Terminal Cheatsheet
 
-> Alle Tools und Befehle auf einen Blick.
-> Im Terminal schön anzeigen mit: `glow CHEATSHEET.md`
+> All tools and commands at a glance.
+> Render beautifully in terminal with: `glow CHEATSHEET.md`
 
 ---
 
-## Navigation & Dateien
+## Navigation & Files
 
-### eza — besseres `ls`
+### eza — better `ls`
 ```bash
-ls          # Dateien mit Icons
-ll          # Details + Git-Status + Icons
-la          # alle Dateien inkl. versteckte
-lt          # Baum-Ansicht
-lt --level=2  # Baum nur 2 Ebenen tief
+ls            # files with icons
+ll            # details + git status + icons
+la            # all files including hidden
+lt            # tree view
+lt --level=2  # tree, 2 levels deep
 ```
 
 ### zoxide — smarter `cd`
 ```bash
-z projekte        # springt in den Ordner der "projekte" enthält
-z bon             # springt nach Bonadurer (nach erstem Besuch)
-zi                # interaktive Auswahl mit fzf
+z projects        # jump to folder containing "projects"
+zi                # interactive selection with fzf
 ```
 
-### fd — modernes `find`
+### fd — modern `find`
 ```bash
-fd ".php"             # alle PHP-Dateien im aktuellen Ordner
-fd -e css             # alle CSS-Dateien
-fd "style" src/       # "style" in src/ suchen
-fd -t d "components"  # nur Ordner mit dem Namen "components"
+fd ".php"             # all PHP files in current folder
+fd -e css             # all CSS files
+fd "style" src/       # search "style" in src/
+fd -t d "components"  # only folders named "components"
 ```
 
 ---
 
-## Suchen
+## Searching
 
-### ripgrep — blitzschnelles grep
+### ripgrep — blazing fast grep
 ```bash
-rg "suchbegriff"           # rekursiv im aktuellen Ordner
-rg "wp_query" ~/Projekte   # in einem bestimmten Ordner
-rg -l "elementor"          # nur Dateinamen ausgeben
-rg -i "Login"              # Groß-/Kleinschreibung ignorieren
-rg "TODO" --type php       # nur in PHP-Dateien
+rg "searchterm"            # recursive in current folder
+rg "wp_query" ~/projects   # in a specific folder
+rg -l "elementor"          # only print filenames
+rg -i "Login"              # case insensitive
+rg "TODO" --type php       # only in PHP files
 ```
 
 ### fzf — fuzzy finder
 ```bash
-Ctrl+R    # History durchsuchen
-Ctrl+T    # Datei fuzzy-suchen und einfügen
-Alt+C     # Ordner wechseln mit fzf
+Ctrl+R    # search command history
+Ctrl+T    # fuzzy-search a file and insert path
+Alt+C     # change directory with fzf
 ```
 
 ---
 
 ## Git
 
-### lazygit — visuelle Git-UI
+### lazygit — visual git UI
 ```bash
-lg        # lazygit öffnen
+lg        # open lazygit
 ```
 **In lazygit:**
-- `Space` — Datei stagen/unstagen
+- `Space` — stage / unstage file
 - `c` — commit
 - `p` — push
 - `P` — pull
-- `b` — Branch-Menü
-- `q` — beenden
+- `b` — branch menu
+- `q` — quit
 
-### delta — schöne git diffs
-Läuft automatisch im Hintergrund. Alle `git diff` und `git log -p` Ausgaben
-sehen jetzt automatisch mit Syntax-Highlighting aus.
+### delta — beautiful git diffs
+Runs automatically in the background. All `git diff` and `git log -p` output
+gets syntax highlighting automatically.
 ```bash
-git diff          # delta wird automatisch genutzt
-git log -p        # auch hier
+git diff        # delta kicks in automatically
+git log -p      # here too
 ```
 
-### onefetch — Repo-Übersicht
+### onefetch — repo overview
 ```bash
-onefetch          # im git-Repo ausführen → schöne Statistik
+onefetch        # run inside a git repo → pretty statistics
 ```
 
 ---
 
-## Dateien anzeigen
+## Viewing Files
 
-### bat — besseres `cat`
+### bat — better `cat`
 ```bash
-cat datei.php       # (alias auf bat) mit Syntax-Highlighting
-bat datei.css       # direkt aufrufen
-bat -n datei.js     # mit Zeilennummern
+cat file.php      # (alias for bat) with syntax highlighting
+bat file.css      # call directly
+bat -n file.js    # with line numbers
 ```
 
-### glow — Markdown rendern
+### glow — render markdown
 ```bash
-glow README.md      # Markdown schön im Terminal anzeigen
-glow CHEATSHEET.md  # dieses Dokument!
-glow .              # alle .md Dateien im Ordner auflisten
+glow README.md      # render markdown in terminal
+glow CHEATSHEET.md  # this document!
+glow .              # list all .md files in folder
 ```
 
 ---
 
 ## System
 
-### btop — Systemmonitor
+### btop — system monitor
 ```bash
-btop        # öffnen
+btop        # open
 ```
-- `q` — beenden
-- `f` — Prozess suchen
-- Maus funktioniert auch!
+- `q` — quit
+- `f` — search process
+- Mouse works too!
 
-### tldr — vereinfachte Hilfe
+### tldr — simplified help
 ```bash
-tldr tar          # kurze Beispiele für tar
-tldr git          # git Kurzreferenz
-tldr curl         # curl Beispiele
-tldr fd           # fd Beispiele
+tldr tar          # short examples for tar
+tldr git          # git quick reference
+tldr curl         # curl examples
+tldr fd           # fd examples
 ```
 
 ---
 
-## Dateitransfer
+## File Transfer
 
-### croc — Dateien zwischen Rechnern senden
+### croc — send files between machines
 ```bash
-# Auf dem Sender-Rechner:
-croc send datei.zip
-# → gibt einen Code aus, z.B. "correct-horse-battery"
+# On the sender:
+croc send file.zip
+# → outputs a code, e.g. "correct-horse-battery"
 
-# Auf dem Empfänger-Rechner:
+# On the receiver:
 croc correct-horse-battery
 ```
-Beide Rechner müssen gleichzeitig online sein. Kein Cloud-Umweg, Ende-zu-Ende verschlüsselt.
+Both machines must be online simultaneously. No cloud middleman, end-to-end encrypted.
 
 ---
 
-## Projekt-Shortcuts
+## Keyboard Shortcuts
 
-```bash
-proj        # cd /mnt/c/Users/amira/_projekte
-bonadurer   # cd .../Bonadurer
-```
+| Shortcut | Action |
+|---|---|
+| `Ctrl+R` | Search history (fzf) |
+| `Ctrl+T` | Search files (fzf) |
+| `Ctrl+L` | Clear terminal |
+| `Ctrl+A` | Move cursor to start |
+| `Ctrl+E` | Move cursor to end |
+| `Ctrl+U` | Delete line |
+| `Alt+.`  | Insert last argument |
+| `Tab`    | Autocomplete (zsh-autosuggestions) |
+| `→`      | Accept suggestion |
 
 ---
 
-## Claude Code aufhübschen ♡
+## Personalizing Claude Code ♡
 
-Claude Code kann mit einer `CLAUDE.md` Datei personalisiert werden.
-Diese Datei liegt in `~/.claude/CLAUDE.md` und gibt Claude Anweisungen
-wie er sich verhalten soll.
+Claude Code can be personalized with a `CLAUDE.md` file.
+Place it at `~/.claude/CLAUDE.md` to give Claude instructions on how to behave.
 
-### Kaomojis aktivieren
+### Enable kaomojis
 
-Erstelle oder bearbeite `~/.claude/CLAUDE.md`:
-
+Create or edit `~/.claude/CLAUDE.md`:
 ```bash
 nano ~/.claude/CLAUDE.md
 ```
 
-Inhalt:
+Contents:
 ```markdown
-# Meine Claude-Einstellungen
+# My Claude Settings
 
-## Stil
-- Antworte auf Deutsch
-- Streue gelegentlich Kaomojis ein, z.B. (˶ᵔ ᵕ ᵔ˶) (◕‿◕✿) ٩(˘◡˘)۶
-- Halte Antworten kurz und präzise
-- Keine langen Erklärungen wenn nicht nötig
+## Style
+- Reply in English
+- Sprinkle in kaomojis occasionally, e.g. (˶ᵔ ᵕ ᵔ˶) (◕‿◕✿) ٩(˘◡˘)۶
+- Keep answers short and precise
+- No long explanations unless necessary
 
-## Verhalten
-- Frag nach bevor du große Änderungen machst
-- Zeig mir Befehle die ich selbst ausführen kann
+## Behavior
+- Ask before making large changes
+- Show me commands I can run myself
 ```
 
-### Sprache & Ton anpassen
-
-Weitere nützliche Einstellungen für `CLAUDE.md`:
-```markdown
-## Projekte
-- Bonadurer: WordPress + Elementor Pro Projekt unter ~/Bonadurer
-- Sprache im Code: Englisch, Kommentare: Deutsch ok
-
-## Was ich nicht mag
-- Keine langen Zusammenfassungen am Ende
-- Nicht jeden Schritt erklären den du machst
-```
-
-> **Tipp:** Je mehr du Claude über deine Vorlieben sagst, desto besser
-> wird er — er merkt sich alles über Sessions hinweg!
+> **Tip:** The more you tell Claude about your preferences, the better it gets —
+> it remembers everything across sessions!
 
 ---
 
-## Tastenkürzel Terminal
-
-| Kürzel | Aktion |
-|--------|--------|
-| `Ctrl+R` | History suchen (fzf) |
-| `Ctrl+T` | Datei suchen (fzf) |
-| `Ctrl+L` | Terminal leeren |
-| `Ctrl+A` | Cursor zum Anfang |
-| `Ctrl+E` | Cursor zum Ende |
-| `Ctrl+U` | Zeile löschen |
-| `Alt+.`  | Letztes Argument einfügen |
-| `Tab`    | Autocomplete (zsh-autosuggestions) |
-| `→`      | Autosuggestion übernehmen |
-
----
-
-*Terminal Setup by Amira ♡ — zsh + powerlevel10k + 16 coole Tools*
+*Terminal Setup by Amira ♡ — zsh + powerlevel10k + 16 great tools*

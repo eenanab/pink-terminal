@@ -1,73 +1,73 @@
-# ♡ Terminal Setup mit Claude installieren
+# 🌸 Install Terminal Setup with Claude
 
-Dieses Dokument enthält einen fertigen Prompt den du Claude geben kannst,
-damit er das Terminal-Setup automatisch auf deinem Laptop einrichtet.
-
----
-
-## So gehts
-
-1. Öffne Claude Code im Terminal deines Laptops
-2. Kopiere den Prompt unten komplett
-3. Füge ihn in Claude Code ein und schicke ihn ab
-4. Claude erledigt den Rest
+This document contains a ready-made prompt you can give to Claude Code
+so it automatically sets up this terminal on your machine.
 
 ---
 
-## Der Prompt
+## How it works
+
+1. Open Claude Code in your terminal
+2. Copy the prompt below in full
+3. Paste it into Claude Code and send it
+4. Claude handles the rest
+
+---
+
+## The Prompt
 
 ```
-Ich möchte mein Terminal-Setup einrichten. Ich habe eine Datei namens
-terminal-setup2.zip die folgendes enthält:
+I want to set up my terminal. I have a repository called pink-terminal that contains:
 
-- install.sh         → installiert alle Tools automatisch
-- dotfiles/          → .zshrc, .p10k.zsh, .terminal_banner.py
-- fonts/             → MesloLGS NF (4 Varianten, für Windows Terminal)
-- config/glow/       → pinkes Glow-Theme für Markdown
-- CHEATSHEET.md      → Übersicht aller Befehle
-- CHEATSHEET.md      → diese Datei
+- install.sh              → installs all tools automatically
+- dotfiles/               → .zshrc, .p10k.zsh, .terminal_banner.py
+- fonts/                  → MesloLGS NF (4 variants, for Windows Terminal)
+- themes/amira-pink.json  → Windows Terminal color scheme
+- config/glow/            → pink glow theme for markdown
+- CHEATSHEET.md           → overview of all commands
 
-Bitte hilf mir dabei:
+Please help me with:
 
-1. Die ZIP-Datei zu entpacken (sie liegt unter ~/terminal-setup2.zip
-   oder wo ich sie abgelegt habe)
-
-2. Das install.sh auszuführen mit: bash install.sh
-   (Es installiert: zsh, Oh My Zsh, Powerlevel10k, fzf, zoxide, bat,
+1. Running the install script:
+   bash install.sh
+   (It installs: zsh, Oh My Zsh, Powerlevel10k, fzf, zoxide, bat,
    eza, lazygit, btop, croc, ripgrep, delta, fd, tldr, glow, onefetch)
 
-3. Die MesloLGS NF Schriftart auf Windows zu installieren:
-   - Die 4 TTF-Dateien aus dem fonts/ Ordner nach Windows kopieren
-   - In Windows Explorer doppelklicken → "Installieren"
-   - In Windows Terminal Einstellungen: Schriftart auf "MesloLGS NF" setzen
+2. Installing the MesloLGS NF font on Windows:
+   - Copy the 4 TTF files from the fonts/ folder to Windows
+   - Double-click each → "Install"
+   - In Windows Terminal settings: set font to "MesloLGS NF"
 
-4. Das Terminal neu zu starten und zu prüfen ob alles funktioniert
+3. Applying the color scheme:
+   - Copy themes/amira-pink.json into Windows Terminal settings.json → schemes array
+   - Set "colorScheme": "Amira Pink" in the Ubuntu profile
 
-5. Falls etwas nicht klappt, hilf mir beim Debuggen
+4. Restarting the terminal and checking everything works
 
-Wichtig: Ich bin auf WSL2 mit Ubuntu 24.04. Mein Benutzername ist [DEIN_USERNAME].
-Passe alle Pfade entsprechend an.
+5. If something goes wrong, help me debug it
+
+Note: I'm on WSL2 with Ubuntu 24.04. My username is [YOUR_USERNAME].
+Please adjust all paths accordingly.
 ```
 
 ---
 
-## Hinweise
+## Notes
 
-- Ersetze `[DEIN_USERNAME]` im Prompt mit deinem tatsächlichen Linux-Benutzernamen
-  (herausfinden mit: `whoami`)
-- Die ZIP-Datei muss erst von Windows nach WSL kopiert werden, z.B. über
-  den Windows Explorer: `\\wsl$\Ubuntu-24.04\home\[USERNAME]\`
-- Nach der Installation: `glow CHEATSHEET.md` für alle Befehle
+- Replace `[YOUR_USERNAME]` in the prompt with your actual Linux username
+  (find out with: `whoami`)
+- Copy the zip or clone the repo into WSL first, e.g. via Windows Explorer:
+  `\\wsl$\Ubuntu-24.04\home\[USERNAME]\`
+- After installation: `glow CHEATSHEET.md` to see all commands
 
 ---
 
-## Alternativ: Ohne Claude selbst installieren
+## Manual install (without Claude)
 
 ```bash
-cd ~
-unzip terminal-setup2.zip
-cd terminal-setup2
+git clone https://github.com/eenanab/pink-terminal ~/github/pink-terminal
+cd ~/github/pink-terminal
 bash install.sh
 ```
 
-Dann die Fonts installieren und Terminal neu starten. Fertig!
+Then install the fonts and restart the terminal. Done! ♡

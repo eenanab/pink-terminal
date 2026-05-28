@@ -1,74 +1,102 @@
-# ♡ pink-terminal
+<div align="center">
 
-Amiras pinkes Terminal-Setup für WSL2 Ubuntu mit Windows Terminal.
+# 🌸 pink-terminal
 
-## Was ist drin?
+**A cozy, fully pink WSL2 terminal setup**
 
-| Ordner/Datei | Inhalt |
+![Platform](https://img.shields.io/badge/platform-WSL2%20Ubuntu-ff9eb5?style=flat-square&labelColor=4a2040)
+![Shell](https://img.shields.io/badge/shell-zsh%20%2B%20p10k-f48fb1?style=flat-square&labelColor=4a2040)
+![Font](https://img.shields.io/badge/font-MesloLGS%20NF-b39ddb?style=flat-square&labelColor=4a2040)
+![Theme](https://img.shields.io/badge/theme-Amira%20Pink-ff79c6?style=flat-square&labelColor=4a2040)
+
+</div>
+
+---
+
+## 💕 What's inside
+
+| Path | Description |
 |---|---|
-| `dotfiles/.zshrc` | Zsh-Konfiguration mit fzf, eza, zsh-highlight, p10k |
-| `dotfiles/.p10k.zsh` | Powerlevel10k Prompt-Konfiguration |
-| `dotfiles/.terminal_banner.py` | Terminal-Banner beim Start |
-| `themes/amira-pink.json` | Windows Terminal Farbschema |
-| `config/glow/` | Glow Markdown-Viewer Konfiguration |
-| `fonts/` | MesloLGS NF (alle 4 Schnitte) |
-| `kaomojis/kaomojis.md` | Kaomoji-Sammlung ♡ |
-| `CHEATSHEET.md` | Befehls-Cheatsheet |
-| `CLAUDE_PROMPT.md` | Claude AI Prompt-Konfiguration |
-| `install.sh` | Automatisches Install-Skript |
+| `dotfiles/.zshrc` | Zsh config — fzf, eza, zsh-highlight, p10k, aliases |
+| `dotfiles/.p10k.zsh` | Powerlevel10k prompt config |
+| `dotfiles/.terminal_banner.py` | Pretty banner on terminal start |
+| `themes/amira-pink.json` | Windows Terminal color scheme |
+| `config/glow/` | Glow markdown viewer config |
+| `fonts/` | MesloLGS NF — all 4 weights |
+| `kaomojis/kaomojis.md` | Kaomoji collection ♡ |
+| `CHEATSHEET.md` | Full command reference |
+| `CLAUDE_PROMPT.md` | Claude AI setup prompt |
+| `install.sh` | Automated install script |
 
-## Farbschema: Amira Pink
+---
 
-| Farbe | Hex |
-|---|---|
-| Background | `#1a0f1e` |
-| Foreground | `#f8c8e8` |
-| Cursor | `#ff79c6` |
-| Red (Soft Rose) | `#ff9eb5` |
-| Yellow (Peach) | `#ffb7a0` |
-| Green | `#7ed8d0` |
-| Blue | `#b39ddb` |
-| Purple | `#f48fb1` |
-| Cyan | `#8ecae6` |
+## 🎀 Color Palette — Amira Pink
 
-## Setup
+| Swatch | Name | Hex | Vibe |
+|---|---|---|---|
+| 🟣 | Background | `#1a0f1e` | deep dark plum |
+| 🌸 | Foreground | `#f8c8e8` | soft pink |
+| 💗 | Cursor | `#ff79c6` | hot pink |
+| 🌷 | Selection BG | `#6e2b5e` | dark plum |
+| 🩷 | Red → Soft Rose | `#ff9eb5` | gentle rose |
+| 🍑 | Yellow → Peach | `#ffb7a0` | warm peach |
+| 🌿 | Green | `#7ed8d0` | minty teal |
+| 💜 | Blue | `#b39ddb` | lavender |
+| 🌺 | Purple | `#f48fb1` | dusty rose |
+| 🩵 | Cyan | `#8ecae6` | sky blue |
 
-### Windows Terminal
-1. `themes/amira-pink.json` Inhalt in Windows Terminal `settings.json` → `schemes` Array einfügen
-2. Im Profil `"colorScheme": "Amira Pink"` setzen
+---
 
-### WSL2 / Ubuntu
+## ✨ Installation
+
+### 1 — Fonts
+Install all 4 `fonts/MesloLGS NF *.ttf` files on Windows (double-click → Install).
+Then set the font in Windows Terminal → `"face": "MesloLGS NF"`.
+
+### 2 — Windows Terminal theme
+Copy `themes/amira-pink.json` into your Windows Terminal `settings.json` → `schemes` array,
+then set your Ubuntu profile to `"colorScheme": "Amira Pink"`.
+
+### 3 — WSL2 / Ubuntu
 ```bash
+git clone https://github.com/eenanab/pink-terminal ~/github/pink-terminal
+cd ~/github/pink-terminal
 chmod +x install.sh
 ./install.sh
 ```
 
-## Tools
-- Zsh + Oh-My-Zsh + Powerlevel10k
-- fzf (fuzzy finder, pink theme)
-- eza (ls-Ersatz)
-- bat, fd, rg, delta, zoxide, glow, btop
-- MesloLGS NF Font
+Or from the zip:
+```bash
+unzip terminal-setup2.zip && cd terminal-setup2
+bash install.sh
+```
 
 ---
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣴⠶⠶⠶⠶⠦⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣶⠾⠟⣿⣿⠾⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠻⢶⣤⣠⣤⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠟⠉⠀⠀⠸⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣀⠈⠙⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠏⠀⠀⠀⠀⢠⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠈⠻⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡟⠁⠀⠀⠀⠀⢀⡿⠁⠀⠀⣰⣶⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣄⠀⠀⠀⠀⠀⢿⡀⠀⠀⠀⠀⠀⠙⠷⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣀⣴⠟⠋⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠐⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⡇⠀⠀⠀⠀⢸⣇⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⣦⣄⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⣀⣴⠾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⢿⡇⠉⠁⠉⠈⠉⠀⠀⠀⠀⠀⠀⣠⢤⣀⠀⠀⠀⠀⠀⠉⠿⠿⠁⡀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢶⣄⠀⠀⠀
-⠀⣠⡾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⣄⠤⠠⠐⢀⡀⠀⠀⠀⠀⠀⠋⠁⠉⠁⠀⠀⠀⠀⠀⠄⠀⠀⠀⢁⠀⠀⣼⢿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⡄⠀
-⢠⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠻⢶⣤⣴⡾⠷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣦⣤⠀⠜⣀⣴⠟⠈⢿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⠀
-⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠁⠀⠀⣿⠃⠀⠀⢸⡟⠳⠶⠶⠶⢦⣶⣴⣶⣴⣶⣶⣿⠉⠀⠹⣷⣿⣿⣥⣄⡀⠀⢻⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
-⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⢿⣆⣠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⠀⢀⣿⠟⠉⠉⠉⠛⣷⡄⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇
-⠘⢷⣄⡀⠀⠀⠀⠀⠀⠀⢀⣠⣴⠟⠃⠀⠀⠀⠀⠀⠀⣼⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠶⠿⣷⡀⠀⠀⣀⠀⠈⣿⡄⠀⠙⢷⣄⡀⠀⠀⠀⠀⠀⠀⣀⣼⠏⠀
-⠀⠀⠉⠛⠷⠶⠶⠶⠶⠾⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣧⣤⣴⠏⠀⠀⣽⡇⠀⠀⠀⠈⠛⠿⠶⠶⠶⠶⠿⠋⠁⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⣠⣤⣄⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⣼⡇⠀⠀⠀⠀⣴⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣷⡾⠋⠀⠁⠀⠀⠀⠀⠀⢀⣾⠛⠉⠙⠓⠀⠀⢀⣴⠟⠛⠿⠾⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠐⢶⣶⣶⣶⣶⣾⣿⡀⠀⠀⢶⡶⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣧⣀⣠⡿⠁⠀⠀⠀⠀⢹⣇⡀⣠⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠙⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ made with love by amira
+## 🌷 Tools
+
+| Tool | What it does |
+|---|---|
+| `zsh` + Oh-My-Zsh | Shell |
+| Powerlevel10k | Beautiful prompt |
+| `fzf` | Fuzzy finder — `Ctrl+R`, `Ctrl+T` |
+| `eza` | Better `ls` with icons |
+| `bat` | Better `cat` with syntax highlighting |
+| `fd` | Better `find` |
+| `rg` (ripgrep) | Blazing fast grep |
+| `delta` | Beautiful git diffs |
+| `lazygit` | Visual git UI (`lg`) |
+| `zoxide` | Smart `cd` (`z`) |
+| `glow` | Render markdown in terminal |
+| `btop` | System monitor |
+| `tldr` | Simplified man pages |
+| `croc` | Encrypted peer-to-peer file transfer |
+| `onefetch` | Repo statistics |
+
+---
+
+<div align="center">
+
+(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ &nbsp; made with love by amira &nbsp; ♡
+
+</div>
